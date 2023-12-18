@@ -1,10 +1,10 @@
 name: 'Dastardly Scan Action'
 description: 'Runs a Dastardly scan against a target site'
 on:
-push:
-    branches:
-      - main
-    pull_request:
+    push:
+        branches:
+          - main
+        pull_request:
 
 inputs:
   target-url:
