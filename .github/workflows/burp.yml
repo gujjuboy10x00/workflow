@@ -11,3 +11,9 @@ steps:
     uses: PortSwigger/dastardly-github-action@main
     with:
       target-url: 'https://ginandjuice.shop'
+
+jobs:
+  build:
+    permissions:
+      issues: write
+    runs-on: ubuntu-latest
