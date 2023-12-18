@@ -5,14 +5,14 @@ on:
     branches: [ main ]
 
 jobs:
-  sync:
-    permissions:
-      contents: write
+  scan:
     runs-on: ubuntu-latest
 
-steps:
-  - name: Run Dastardly Action Step
-    uses: PortSwigger/dastardly-github-action@main
-    with:
-      target-url: 'https://ginandjuice.shop'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
+      - name: Run Burp Suite Dastardly Action
+        uses: PortSwigger/dastardly-github-action@main
+        with:
+          target-url: 'https://ginandjuice.shop'
