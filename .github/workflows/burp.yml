@@ -1,10 +1,14 @@
-name: 'Dastardly Scan Action'
-description: 'Runs a Dastardly scan against a target site'
+name: Burp scanner
+
 on:
-    push:
-        branches:
-          - main
-        pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  sync:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
 
 steps:
   - name: Run Dastardly Action Step
@@ -12,8 +16,3 @@ steps:
     with:
       target-url: 'https://ginandjuice.shop'
 
-jobs:
-  build:
-    permissions:
-      issues: write
-    runs-on: ubuntu-latest
