@@ -19,7 +19,7 @@ jobs:
 
       - name: Run Burp Suite Dastardly Action
         continue-on-error: true  
-        uses: PortSwigger/dastardly-github-action@main
+        uses: PortSwigger/dastardly-github-action@054b0d6fff8bf37943337d0c3c7a7d517868997d
         with:
           target-url: 'https://ginandjuice.shop'
       - name: Publish Test Report
